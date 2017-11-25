@@ -1,0 +1,156 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@model ASP.NET.MVC.Models.UserAuthenticationModel
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Department</title>
+    <link href="@Url.Content("~/Content/jquery-ui/redmond/jquery-ui-1.8.14.custom.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/jquery-grid/ui.jqgrid.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/MicrosoftAjax.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/MicrosoftMvcAjax.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/jgrid/js/jquery-1.7.2.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery-grid/grid.locale-en.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/jgrid/js/jquery.jqGrid.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/jgrid/js/jquery.jqGrid.src.js")" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+
+        var jqDataUrlCMS = "Home/userList/";
+   
+
+        function isValidOrder(value, name) {
+           
+
+
+        }
+        jQuery(document).ready(function () {
+
+
+           
+
+            jQuery("#list").jqGrid({
+
+            url: jqDataUrlCMS,
+            datatype: "json",
+            mtype: "POST",
+
+            colNames: ["UserID", "UserName", "UserEmail"],
+            colModel: [
+                { name: 'UserID', index: 'UserID', width: 40, align: 'left', /* key: true,*/ editable: true, editrules: { edithidden: false }, hidedlg: true, hidden: true },
+                { name: 'UserName', index: 'UserName', width: 300, align: 'left', editable: true, edittype: 'text', editrules: { required: true }, formoptions: { elmsuffix: ' *' } },
+                { name: 'UserEmail', index: 'UserEmail', width: 200, align: 'left', formatter: 'mail', editable: true, edittype: 'text', editrules: { required: true, email: true }, formoptions: { elmsuffix: ' *' } }
+            ],
+
+            width: 900,
+            height: 300,
+            multiselect: true,
+            multiboxonly: true,
+            toppager: true,
+            pager: jQuery("#listPager"),
+            rowNum: 1000,
+            rowList: [10, 20, 30],
+            viewrecords: true,
+
+
+            sortname: "UserName",
+            sortorder: "asc",
+
+            onSelectRow: function (id) {
+
+            
+
+
+            },
+
+
+            loadComplete: function (data) {
+                jQuery("#list").jqGrid().trigger("reloadGrid");
+                jQuery("#list td input").each(function () {
+                    jQuery(this).click(function (e) {
+
+                        var tr = jQuery(e.target).closest('tr');
+                        var ch = jQuery(this).prop('checked');
+
+                    });
+                });
+                var rowid = jQuery("#list").jqGrid('getGridParam', 'selrow');
+
+                if (rowid == null) {
+
+
+                } else {
+
+                 
+
+                }
+            },
+            caption: "Department List"
+            }).navGrid("#listPager", { refresh: true, reload: true, add: false, edit: true, del: true },
+         {
+             afterShowForm: function (formID) {
+
+      
+                 var list = jQuery("#list");
+                 var selectedRow = list.getGridParam("selrow");
+                 rowData = list.getRowData(selectedRow);
+
+                
+             }
+         },
+         {
+            
+
+         }       
+        )
+       
+        .navButtonAdd('#listPager', {
+            caption: "Add",
+            buttonicon: "ui-icon-add",
+            onClickButton: function () {
+
+               
+            },
+            position: "first"
+        });
+
+
+    });
+
+</script>
+
+
+
+</head>
+<body>
+    <div>
+
+        @Html.DropDownListFor(model=>model.userID,(SelectList)ViewBag.ListUser,"All",new {id="ddlUserList", onChange = "onSelectedIndexChanged()" })
+   
+         <div id="outer">
+            
+        <table id="list" class="scroll" cellpadding="0" cellspacing="0"></table>
+    <div id="listPager" class="scroll" style="text-align:center;"></div>                                                            
+    <div id="listPsetcols" class="scroll" style="text-align:center;"></div>  
+
+        </div>
+ 
+
+       
+    </div>
+    <script type="text/javascript">
+        function onSelectedIndexChanged() {
+                        var sub = document.getElementById("ddlUserList");
+                       jQuery("#list").jqGrid().setGridParam({ url: "Home/userList/ " + sub.value + "" }).trigger("reloadGrid");
+        }
+          
+    </script>
+</body>
+</html>

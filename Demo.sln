@@ -1,0 +1,80 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{9FC8C9AB-59B2-43AE-8E4F-C18B0956CD21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{381C3F2B-5283-4764-91B6-DB916602CBCC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{C10B71E4-879F-43D5-8291-6FDBEA973441}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NET", "ASP.NET\ASP.NET.csproj", "{B66B3E8F-543C-425A-945F-34292BD9A268}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NET.MVC", "ASP.NET.MVC\ASP.NET.MVC.csproj", "{D9D83EB0-262E-4509-A5FD-00337F906AD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF", "WPF\WPF.csproj", "{9B00B124-AC0D-428A-B503-124E4410D63B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{8521BB20-2A68-40D9-A3C4-79800F1FDA2D}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs05.discountasp.net/tfs/isoftware
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ASP.NET.MVC\\ASP.NET.MVC.csproj
+		SccProjectTopLevelParentUniqueName1 = Demo.sln
+		SccProjectName1 = ASP.NET.MVC
+		SccLocalPath1 = ASP.NET.MVC
+		SccProjectUniqueName2 = ASP.NET\\ASP.NET.csproj
+		SccProjectTopLevelParentUniqueName2 = Demo.sln
+		SccProjectName2 = ASP.NET
+		SccLocalPath2 = ASP.NET
+		SccProjectUniqueName3 = DataAccess\\DataAccess.csproj
+		SccProjectTopLevelParentUniqueName3 = Demo.sln
+		SccProjectName3 = DataAccess
+		SccLocalPath3 = DataAccess
+		SccProjectUniqueName4 = Services\\Services.csproj
+		SccProjectTopLevelParentUniqueName4 = Demo.sln
+		SccProjectName4 = Services
+		SccLocalPath4 = Services
+		SccProjectUniqueName5 = WPF\\WPF.csproj
+		SccProjectTopLevelParentUniqueName5 = Demo.sln
+		SccProjectName5 = WPF
+		SccLocalPath5 = WPF
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FC8C9AB-59B2-43AE-8E4F-C18B0956CD21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FC8C9AB-59B2-43AE-8E4F-C18B0956CD21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FC8C9AB-59B2-43AE-8E4F-C18B0956CD21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FC8C9AB-59B2-43AE-8E4F-C18B0956CD21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{381C3F2B-5283-4764-91B6-DB916602CBCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{381C3F2B-5283-4764-91B6-DB916602CBCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{381C3F2B-5283-4764-91B6-DB916602CBCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{381C3F2B-5283-4764-91B6-DB916602CBCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B66B3E8F-543C-425A-945F-34292BD9A268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B66B3E8F-543C-425A-945F-34292BD9A268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B66B3E8F-543C-425A-945F-34292BD9A268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B66B3E8F-543C-425A-945F-34292BD9A268}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9D83EB0-262E-4509-A5FD-00337F906AD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9D83EB0-262E-4509-A5FD-00337F906AD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9D83EB0-262E-4509-A5FD-00337F906AD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9D83EB0-262E-4509-A5FD-00337F906AD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B00B124-AC0D-428A-B503-124E4410D63B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B00B124-AC0D-428A-B503-124E4410D63B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B00B124-AC0D-428A-B503-124E4410D63B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B00B124-AC0D-428A-B503-124E4410D63B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{381C3F2B-5283-4764-91B6-DB916602CBCC} = {8521BB20-2A68-40D9-A3C4-79800F1FDA2D}
+		{9FC8C9AB-59B2-43AE-8E4F-C18B0956CD21} = {8521BB20-2A68-40D9-A3C4-79800F1FDA2D}
+		{B66B3E8F-543C-425A-945F-34292BD9A268} = {C10B71E4-879F-43D5-8291-6FDBEA973441}
+		{D9D83EB0-262E-4509-A5FD-00337F906AD0} = {C10B71E4-879F-43D5-8291-6FDBEA973441}
+		{9B00B124-AC0D-428A-B503-124E4410D63B} = {C10B71E4-879F-43D5-8291-6FDBEA973441}
+	EndGlobalSection
+EndGlobal
